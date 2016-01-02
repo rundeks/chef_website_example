@@ -4,7 +4,7 @@
 #
 # Copyright (c) 2016 Kevin Runde, All Rights Reserved.
 
-#Create intial user and group for WWW files
+# Create intial user and group for WWW files
 group node['www_files']['group']
 
 user node['www_files']['user'] do
