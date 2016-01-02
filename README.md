@@ -1,4 +1,4 @@
 # chef_website_example
 
-TODO: Enter the cookbook description here.
+This is an example showing how to use chef to create a Web Server.
 
