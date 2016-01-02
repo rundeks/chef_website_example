@@ -1,0 +1,23 @@
+<VirtualHost *:80>
+  ServerName <%= node['hostname'] %>
+  ServerAdmin 'rundeks@gmail.com'
+
+  DocumentRoot <%= node['www_files']['document_root'] %>
+  <Directory />
+          Options FollowSymLinks
+          AllowOverride None
+  </Directory>
+  <Directory <%= node['www_files']['document_root'] %> >
+          Options Indexes FollowSymLinks MultiViews
+          AllowOverride None
+          Order allow,deny
+          allow from all
+  </Directory>
+
+  ErrorLog /var/log/httpd/error.log
+
+  LogLevel warn
+
+  CustomLog /var/log/httpd/access.log combined
+  ServerSignature Off
+</VirtualHost>
